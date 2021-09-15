@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Sistema {
     private int soma;
     private double somad;
+    private String a = "resposta: ";
     public Sistema(){
         System.out.println("Testando a Integridade Do Sistema");
     }
@@ -10,7 +11,8 @@ public class Sistema {
         
         Scanner s = new Scanner(System.in);
         System.out.println("Deseja calcular Inteiros");
-        System.out.println("Se sim Escreva Inteiros se não aperta enter pra passar");
+        System.out.println("Se sim Escreva Sim se não aperta enter pra passar");
+        System.out.println();
         System.out.print(">");
         String Inteiro = s.nextLine();
         if(Inteiro.equals("Sim")||Inteiro.equals("sim")){
@@ -27,18 +29,15 @@ public class Sistema {
                 System.out.println("Escolha operadores matematicos");
                 System.out.println("{1 = +},{2 = -},{3 = *},{4 = /}");
                 System.out.print(">");
+               
                 switch(s.nextInt()){
-                case 1:System.out.println(x+y);//+
-                soma = x + y;
+                case 1: System.out.printf("resposta = %d",soma = x+y);//+
                 break;
-                case 2:System.out.println(x-y);//-
-                soma = x - y;
+                case 2: System.out.printf("resposta = %d",soma = x-y);//-
                 break;
-                case 3:System.out.println(x*y);//*
-                soma = x * y;
+                case 3: System.out.printf("resposta = %d",soma = x*y);//*
                 break;
-                case 4:System.out.println(x/y);//Divisão
-                soma = x / y;
+                case 4: System.out.printf("resposta = %d",soma = x/y);//divisão
                 break;
             }
         }
@@ -59,27 +58,19 @@ public class Sistema {
             e = s.nextDouble();
             System.out.println("{1 = +},{2 = -},{3 = *},{4 = /}");
             switch(s.nextInt()){
-                case 1:System.out.println(q+e);//+
-                somad = q+e;
+                case 1: System.out.printf("resposta = %d",somad = q+e);//+
                 break;
-                case 2:System.out.println(q-e);//-
-                somad = q-e;
+                case 2: System.out.printf("resposta = %d",somad = q-e);//-
                 break;
-                case 3:System.out.println(q*e);//*
-                somad = q*e;
+                case 3: System.out.printf("Resposta = %d",somad = q*e);//*
                 break;
-                case 4:System.out.println(q/e);//Divisão
-                somad = q/e;
+                case 4: System.out.printf("Resposta = %d",somad = q/e);//Divisão
                 break;
             }
-            
         }else{
             System.out.println("----------------------");
             System.out.println("Operação Finalizado");
             System.out.println("----------------------");
-
         }
-        
-
     }
 }
